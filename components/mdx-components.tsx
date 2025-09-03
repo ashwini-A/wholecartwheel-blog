@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts'
+import type { MDXComponents } from 'mdx/types'
 
 // Sample chart component for blog posts
 function SampleChart() {
@@ -65,28 +66,28 @@ function ImageWithCaption({ src, alt, caption }: { src: string, alt: string, cap
   )
 }
 
-export const components = {
+export const components: MDXComponents = {
   // Override default HTML elements
-  h1: (props: any) => <h1 className="text-3xl font-bold mb-6 text-gray-900" {...props} />,
-  h2: (props: any) => <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800" {...props} />,
-  h3: (props: any) => <h3 className="text-xl font-medium mt-6 mb-3 text-gray-800" {...props} />,
-  p: (props: any) => <p className="mb-4 leading-relaxed text-gray-700" {...props} />,
-  ul: (props: any) => <ul className="list-disc list-inside mb-4 space-y-2" {...props} />,
-  ol: (props: any) => <ol className="list-decimal list-inside mb-4 space-y-2" {...props} />,
-  li: (props: any) => <li className="text-gray-700" {...props} />,
-  blockquote: (props: any) => (
+  h1: (props) => <h1 className="text-3xl font-bold mb-6 text-gray-900" {...props} />,
+  h2: (props) => <h2 className="text-2xl font-semibold mt-8 mb-4 text-gray-800" {...props} />,
+  h3: (props) => <h3 className="text-xl font-medium mt-6 mb-3 text-gray-800" {...props} />,
+  p: (props) => <p className="mb-4 leading-relaxed text-gray-700" {...props} />,
+  ul: (props) => <ul className="list-disc list-inside mb-4 space-y-2" {...props} />,
+  ol: (props) => <ol className="list-decimal list-inside mb-4 space-y-2" {...props} />,
+  li: (props) => <li className="text-gray-700" {...props} />,
+  blockquote: (props) => (
     <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 my-6" {...props} />
   ),
-  code: (props: any) => (
+  code: (props) => (
     <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800" {...props} />
   ),
   pre: CodeBlock,
-  
+
   // Custom components for MDX
   SampleChart,
   Callout,
   ImageWithCaption,
-  
+
   // Chart components from Recharts
   LineChart,
   Line,
