@@ -1,0 +1,70 @@
+---
+title: "Welcome to My New Blog"
+date: "2025-01-15"
+excerpt: "Starting fresh with a new Next.js setup optimized for regular updates and data visualizations."
+tags: ["welcome", "meta", "blogging"]
+published: true
+---
+
+# Welcome to My New Blog
+
+I'm excited to start fresh with this new setup! After using Gatsby for a few years, I've migrated to Next.js for faster builds and better developer experience.
+
+## What You'll Find Here
+
+This blog is designed around three main areas:
+
+### Life Insights
+Personal reflections, lessons learned, and thoughts on various topics that interest me.
+
+### Data Visualizations
+Interactive charts and data stories. Here's a simple example:
+
+```jsx
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+
+const data = [
+  { month: 'Jan', posts: 2 },
+  { month: 'Feb', posts: 4 },
+  { month: 'Mar', posts: 3 },
+  { month: 'Apr', posts: 6 },
+]
+
+export default function PostsChart() {
+  return (
+    <ResponsiveContainer width="100%" height={300}>
+      <LineChart data={data}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="month" />
+        <YAxis />
+        <Tooltip />
+        <Line type="monotone" dataKey="posts" stroke="#2563eb" strokeWidth={2} />
+      </LineChart>
+    </ResponsiveContainer>
+  )
+}
+```
+
+### Career Projects
+A portfolio showcasing my work, experiments, and learning journey.
+
+## The Tech Stack
+
+This blog is built with:
+- **Next.js 14** - Fast builds and great developer experience
+- **MDX** - Markdown with React components
+- **Tailwind CSS** - Rapid styling
+- **Recharts** - Data visualizations
+- **Vercel** - Free hosting with automatic deployments
+
+## What's Next
+
+I'm planning to write regularly about:
+- Data analysis projects
+- Career insights and lessons
+- Technical experiments
+- Personal growth and reflections
+
+The goal is to make updating this blog as frictionless as possible, so I can focus on creating content rather than fighting with the tooling.
+
+Thanks for reading, and stay tuned for more posts!
