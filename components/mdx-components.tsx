@@ -1,6 +1,9 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts'
-import type { MDXComponents } from '@mdx-js/react'
+
+type MDXComponents = {
+  [key: string]: React.ComponentType<any>
+}
 
 // Sample chart component for blog posts
 function SampleChart() {
