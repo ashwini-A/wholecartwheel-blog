@@ -12,6 +12,13 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': __dirname,
+    }
+    return config
+  },
 }
 
 module.exports = withMDX(nextConfig)
