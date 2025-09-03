@@ -1,17 +1,6 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-})
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  experimental: {
-    mdxRs: true,
-  },
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -21,4 +10,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withMDX(nextConfig)
+module.exports = nextConfig
