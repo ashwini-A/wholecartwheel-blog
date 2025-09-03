@@ -1,5 +1,6 @@
+import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts'
-import type { MDXComponents } from 'mdx/types'
+import type { MDXComponents } from '@mdx-js/react'
 
 // Sample chart component for blog posts
 function SampleChart() {
@@ -42,9 +43,9 @@ function Callout({ children, type = 'info' }: { children: React.ReactNode, type?
 }
 
 // Custom code block with syntax highlighting placeholder
-function CodeBlock({ children, className }: { children: React.ReactNode, className?: string }) {
+function CodeBlock({ children, className, ...props }: React.HTMLAttributes<HTMLPreElement>) {
   return (
-    <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6">
+    <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6" {...props}>
       <code className={className}>
         {children}
       </code>
@@ -81,7 +82,7 @@ export const components: MDXComponents = {
   code: (props) => (
     <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800" {...props} />
   ),
-  pre: CodeBlock,
+  pre: (props) => <CodeBlock {...props} />,
 
   // Custom components for MDX
   SampleChart,
