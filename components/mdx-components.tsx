@@ -44,11 +44,17 @@ function CodeBlock({ children, className, ...props }: React.HTMLAttributes<HTMLP
   )
 }
 
-// Image component with caption
+// Image component with caption - SEO optimized
 function ImageWithCaption({ src, alt, caption }: { src: string, alt: string, caption?: string }) {
   return (
     <figure className="my-8">
-      <img src={src} alt={alt} className="w-full rounded-lg shadow-lg" />
+      <img 
+        src={src} 
+        alt={alt} 
+        className="w-full rounded-lg shadow-lg" 
+        loading="lazy"
+        decoding="async"
+      />
       {caption && (
         <figcaption className="text-center text-gray-600 text-sm mt-2 italic">
           {caption}
