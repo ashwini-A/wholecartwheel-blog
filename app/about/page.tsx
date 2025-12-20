@@ -11,8 +11,10 @@ export default function AboutPage() {
         
         <div className="prose-custom">
           <p className="text-xl text-gray-600 mb-8">
-            Hi! I'm Ashwini, and this is where I share insights from life, 
-            my current passion projects, and pen thoughts as a working woman in tech.
+            Hi! I'm Ashwini,
+            I write about navigating tech careers under real-life constraints—visas, 
+            parenthood, burnout—and choosing alignment over hustle.
+    
           </p>
 
           <h2>What I Write About</h2>
