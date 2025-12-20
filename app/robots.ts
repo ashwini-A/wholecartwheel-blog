@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://ashwiniwrites.com/sitemap.xml',
+    sitemap: 'https://wholecartwheel.com/sitemap.xml',
   }
 }

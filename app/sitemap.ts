@@ -2,7 +2,7 @@ import { getAllPosts } from '@/lib/posts'
 
 export default async function sitemap() {
   const posts = await getAllPosts()
-  const baseUrl = 'https://ashwiniwrites.com'
+  const baseUrl = 'https://wholecartwheel.com'
 
   const postUrls = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

@@ -2,17 +2,17 @@ import { getAllPosts } from '@/lib/posts'
 
 export async function GET() {
   const posts = await getAllPosts()
-  const baseUrl = 'https://ashwiniwrites.com'
+  const baseUrl = 'https://wholecartwheel.com'
   
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ashwini Writes</title>
-    <description>Insights, data visualizations, and career portfolio</description>
+    <description>Insights, stories with data, and blog</description>
     <link>${baseUrl}</link>
     <language>en-US</language>
-    <managingEditor>ashwini@example.com (Ashwini A)</managingEditor>
-    <webMaster>ashwini@example.com (Ashwini A)</webMaster>
+    <managingEditor>ashwini@wholecartwheel.com (Ashwini)</managingEditor>
+    <webMaster>ashwini@wholecartwheel.com (Ashwini)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>
     ${posts

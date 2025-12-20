@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     }
   }
 
-  const url = `https://ashwiniwrites.com/blog/${post.slug}`
+  const url = `https://wholecartwheel.com/blog/${post.slug}`
 
   return {
     title: `${post.title} - Ashwini Writes`,
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
-      creator: '@ashwini', // Replace with your Twitter handle
+      creator: '@ashwini_aur', // Replace with your Twitter handle
     },
     alternates: {
       canonical: url,
@@ -68,13 +68,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "author": {
       "@type": "Person",
       "name": "Ashwini A",
-      "url": "https://ashwiniwrites.com"
+      "url": "https://wholecartwheel.com"
     },
     "datePublished": post.date,
     "dateModified": post.date,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://ashwiniwrites.com/blog/${post.slug}`
+      "@id": `https://wholecartwheel.com/blog/${post.slug}`
     },
     "publisher": {
       "@type": "Person",

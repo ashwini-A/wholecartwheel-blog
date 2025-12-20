@@ -8,18 +8,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Ashwini Writes',
+    default: 'WholeCartWheel Blog',
     template: '%s - Ashwini Writes'
   },
-  description: 'Insights, data visualizations, and career portfolio by Ashwini A',
-  authors: [{ name: 'Ashwini A', url: 'https://ashwiniwrites.com' }],
+  description: 'Insights, data, and experiments by Ashwini',
+  authors: [{ name: 'Ashwini A', url: 'https://wholecartwheel.com' }],
   keywords: ['blog', 'data visualization', 'insights', 'portfolio', 'career', 'analytics'],
   creator: 'Ashwini A',
-  metadataBase: new URL('https://ashwiniwrites.com'),
+  metadataBase: new URL('https://wholecartwheel.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ashwiniwrites.com',
+    url: 'https://wholecartwheel.com',
     title: 'Ashwini Writes',
     description: 'Insights, data visualizations, and career portfolio',
     siteName: 'Ashwini Writes',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ashwini Writes',
-    description: 'Insights, data visualizations, and career portfolio',
+    description: 'Insights, data, and experiments',
     creator: '@ashwini', // Replace with your Twitter handle
   },
   robots: {

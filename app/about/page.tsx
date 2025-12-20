@@ -11,8 +11,8 @@ export default function AboutPage() {
         
         <div className="prose-custom">
           <p className="text-xl text-gray-600 mb-8">
-            Welcome! I'm Ashwini, and this is where I share insights from life, 
-            create data visualizations, and showcase projects for my career portfolio.
+            Hi! I'm Ashwini, and this is where I share insights from life, 
+            my current passion projects, and pen thoughts as a working woman in tech.
           </p>
 
           <h2>What I Write About</h2>
@@ -22,21 +22,20 @@ export default function AboutPage() {
           
           <ul>
             <li><strong>Life Insights:</strong> Personal reflections, lessons learned, and thoughts on growth</li>
-            <li><strong>Data Visualizations:</strong> Interactive charts, data stories, and analysis projects</li>
-            <li><strong>Career Projects:</strong> Portfolio pieces, experiments, and technical learning</li>
+            <li><strong>Data love:</strong> What does my data tell me? </li>
+            <li><strong>Projects:</strong> Portfolio pieces, experiments, and technical learning</li>
           </ul>
 
           <h2>Why This Blog Exists</h2>
           <p>
-            I created this space to document my journey and share what I learn along the way. 
+            I created this space to document my journey as a working woman in tech and share what I learn along the way. 
             The focus is on regular, authentic updates rather than polished perfection.
           </p>
 
           <h2>The Technical Setup</h2>
           <p>
             This blog is built with Next.js, MDX, and Tailwind CSS, hosted on Vercel. 
-            The setup prioritizes fast publishing and easy content creation, so I can focus 
-            on writing rather than wrestling with technology.
+            The setup prioritizes fast publishing and easy content creation.
           </p>
 
           <h2>Get in Touch</h2>
@@ -54,7 +53,7 @@ export default function AboutPage() {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/yourprofile" 
+              href="https://linkedin.com/in/ashwini-auradkar" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-700 font-medium"
@@ -62,7 +61,7 @@ export default function AboutPage() {
               LinkedIn
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:wholecartwheel@gmail.com"
               className="text-blue-600 hover:text-blue-700 font-medium"
             >
               Email

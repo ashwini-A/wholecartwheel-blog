@@ -14,7 +14,7 @@ export default async function Home() {
           Ashwini Writes
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          Insights from life, data visualizations, and projects for my career portfolio
+          Insights from life, data stories, and experiments
         </p>
         <div className="flex gap-4 justify-center">
           <Link 
