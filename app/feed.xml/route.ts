@@ -7,8 +7,8 @@ export async function GET() {
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ashwini Writes</title>
-    <description>Insights, stories with data, and blog</description>
+    <title>Career, Constraint, and Clarity</title>
+    <description>Reflections on work, life, and building a sustainable path forward</description>
     <link>${baseUrl}</link>
     <language>en-US</language>
     <managingEditor>ashwini@wholecartwheel.com (Ashwini)</managingEditor>

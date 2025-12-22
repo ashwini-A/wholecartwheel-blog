@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-600">
-              © {new Date().getFullYear()} Ashwini Writes. Built with Next.js.
+              © {new Date().getFullYear()} Career, Constraint, and Clarity. Built with Next.js.
             </p>
           </div>
           

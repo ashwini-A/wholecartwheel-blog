@@ -8,26 +8,26 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'WholeCartWheel Blog',
-    template: '%s - Ashwini Writes'
+    default: 'Career, Constraint, and Clarity',
+    template: '%s - Career, Constraint, and Clarity'
   },
-  description: 'Insights, data, and experiments by Ashwini',
+  description: 'Reflections on work, life, and building a sustainable path forward',
   authors: [{ name: 'Ashwini A', url: 'https://wholecartwheel.com' }],
-  keywords: ['blog', 'data visualization', 'insights', 'portfolio', 'career', 'analytics'],
+  keywords: ['career', 'constraints', 'clarity', 'work-life balance', 'sustainable career', 'professional development'],
   creator: 'Ashwini A',
   metadataBase: new URL('https://wholecartwheel.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://wholecartwheel.com',
-    title: 'Ashwini Writes',
-    description: 'Insights, data visualizations, and career portfolio',
-    siteName: 'Ashwini Writes',
+    title: 'Career, Constraint, and Clarity',
+    description: 'Reflections on work, life, and building a sustainable path forward',
+    siteName: 'Career, Constraint, and Clarity',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ashwini Writes',
-    description: 'Insights, data, and experiments',
+    title: 'Career, Constraint, and Clarity',
+    description: 'Reflections on work, life, and building a sustainable path forward',
     creator: '@ashwini', // Replace with your Twitter handle
   },
   robots: {

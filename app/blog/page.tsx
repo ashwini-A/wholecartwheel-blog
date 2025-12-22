@@ -2,8 +2,8 @@ import { getAllPosts } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
 
 export const metadata = {
-  title: 'Blog - Ashwini Writes',
-  description: 'All blog posts about life insights, data visualizations, and career projects',
+  title: 'Blog - Career, Constraint, and Clarity',
+  description: 'Reflections on work, life, and building a sustainable path forward',
 }
 
 export default async function BlogPage() {
@@ -14,7 +14,7 @@ export default async function BlogPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold mb-4">Blog</h1>
         <p className="text-xl text-gray-600">
-          Insights from life, data stories, and project updates
+          Reflections on work, life, and building a sustainable path forward
         </p>
       </div>
 

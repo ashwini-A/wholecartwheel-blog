@@ -1,13 +1,9 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-
-type MDXComponents = {
-  [key: string]: React.ComponentType<any>
-}
+import type { MDXComponents } from 'mdx/types'
 
 // Dynamically import the chart component to avoid SSR issues
 const SampleChart = dynamic(() => import('./SampleChart'), {
-  ssr: false,
   loading: () => (
     <div className="my-8 p-4 border border-gray-200 rounded-lg">
       <h4 className="text-lg font-semibold mb-4">Blog Posts Over Time</h4>
@@ -48,10 +44,10 @@ function CodeBlock({ children, className, ...props }: React.HTMLAttributes<HTMLP
 function ImageWithCaption({ src, alt, caption }: { src: string, alt: string, caption?: string }) {
   return (
     <figure className="my-8">
-      <img 
-        src={src} 
-        alt={alt} 
-        className="w-full rounded-lg shadow-lg" 
+      <img
+        src={src}
+        alt={alt}
+        className="w-full rounded-lg shadow-lg"
         loading="lazy"
         decoding="async"
       />

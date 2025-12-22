@@ -1,12 +1,11 @@
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import { components } from '@/components/mdx-components'
+import { marked } from 'marked'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -17,7 +16,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const post = await getPostBySlug(params.slug)
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
 
   if (!post) {
     return {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   const url = `https://wholecartwheel.com/blog/${post.slug}`
 
   return {
-    title: `${post.title} - Ashwini Writes`,
+    title: `${post.title} - Career, Constraint, and Clarity`,
     description: post.excerpt,
     authors: [{ name: 'Ashwini A' }],
     keywords: post.tags,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
       publishedTime: post.date,
       authors: ['Ashwini A'],
       url,
-      siteName: 'Ashwini Writes',
+      siteName: 'Career, Constraint, and Clarity',
     },
     twitter: {
       card: 'summary_large_image',
@@ -54,11 +54,15 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getPostBySlug(params.slug)
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
 
   if (!post) {
     notFound()
   }
+
+  // Convert markdown to HTML
+  const htmlContent = marked(post.content)
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -74,7 +78,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "dateModified": post.date,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://wholecartwheel.com/blog/${post.slug}`
+      "@id": `https://wholecartwheel.com/blog/${slug}`
     },
     "publisher": {
       "@type": "Person",
@@ -127,8 +131,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           )}
         </header>
 
-        <div className="prose-custom">
-          <MDXRemote source={post.content} components={components} />
+        <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900">
+          <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
       </article>
     </>

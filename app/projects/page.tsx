@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Projects - Ashwini Writes',
+  title: 'Projects - Career, Constraint, and Clarity',
   description: 'Career portfolio and project showcase',
 }
 

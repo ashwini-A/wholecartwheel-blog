@@ -11,10 +11,10 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="text-center py-16">
         <h1 className="text-5xl font-bold mb-6 text-gray-900">
-          Ashwini Writes
+          Career, Constraint, and Clarity
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          Insights from life, data stories, and experiments
+          Reflections on work, life, and building a sustainable path forward
         </p>
         <div className="flex gap-4 justify-center">
           <Link 

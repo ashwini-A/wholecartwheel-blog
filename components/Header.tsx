@@ -6,7 +6,7 @@ export default function Header() {
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            Ashwini Writes
+            Career, Constraint, and Clarity
           </Link>
           
           <div className="flex space-x-8">
