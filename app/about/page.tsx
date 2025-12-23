@@ -1,3 +1,5 @@
+import Newsletter from '@/components/Newsletter'
+
 export const metadata = {
   title: 'About - Career, Constraint, and Clarity',
   description: 'Learn more about this blog and its focus on sustainable career development',
@@ -70,6 +72,14 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Newsletter subscription */}
+      <div className="mt-12 pt-8 border-t border-gray-200">
+        <Newsletter 
+          title="Stay connected"
+          description="Subscribe to get updates when I publish new posts about career, data insights, and project learnings."
+        />
       </div>
     </div>
   )

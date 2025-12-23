@@ -1,5 +1,6 @@
 import { getAllPosts } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
+import Newsletter from '@/components/Newsletter'
 
 export const metadata = {
   title: 'Blog - Career, Constraint, and Clarity',
@@ -19,11 +20,21 @@ export default async function BlogPage() {
       </div>
 
       {posts.length > 0 ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
+        <>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {posts.map((post) => (
+              <PostCard key={post.slug} post={post} />
+            ))}
+          </div>
+          
+          {/* Newsletter subscription */}
+          <div className="max-w-2xl mx-auto">
+            <Newsletter 
+              title="Never miss a post"
+              description="Subscribe to get my latest thoughts on career transitions, work-life balance, and navigating tech as a human."
+            />
+          </div>
+        </>
       ) : (
         <div className="text-center py-16">
           <h2 className="text-2xl font-semibold mb-4 text-gray-700">No posts yet</h2>

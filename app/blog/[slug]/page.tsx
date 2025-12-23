@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 import { marked } from 'marked'
+import Newsletter from '@/components/Newsletter'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -133,6 +134,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900">
           <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        </div>
+
+        {/* Newsletter subscription */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <Newsletter 
+            title="Enjoyed this post?"
+            description="Subscribe to get notified when I publish new reflections on career, constraints, and finding clarity in tech."
+          />
         </div>
       </article>
     </>

@@ -1,12 +1,13 @@
 import Link from 'next/link'
+import LogoWithText from './LogoWithText'
 
 export default function Header() {
   return (
     <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-            Career, Constraint, and Clarity
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <LogoWithText size="md" />
           </Link>
           
           <div className="flex space-x-8">
