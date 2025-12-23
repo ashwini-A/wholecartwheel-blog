@@ -18,8 +18,34 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Debug logging
+    console.log('Environment check:', {
+      hasToken: !!process.env.NOTION_TOKEN,
+      hasDbId: !!process.env.NOTION_DATABASE_ID,
+      tokenLength: process.env.NOTION_TOKEN?.length,
+      dbId: process.env.NOTION_DATABASE_ID
+    })
+
+    if (!process.env.NOTION_TOKEN) {
+      console.error('NOTION_TOKEN is missing')
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      )
+    }
+
+    if (!process.env.NOTION_DATABASE_ID) {
+      console.error('NOTION_DATABASE_ID is missing')
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      )
+    }
+
+    console.log('Attempting to create page with email:', email)
+
     // Add new subscriber (skip duplicate check for now)
-    await notion.pages.create({
+    const result = await notion.pages.create({
       parent: {
         database_id: databaseId,
       },
@@ -50,6 +76,8 @@ export async function POST(request: NextRequest) {
         },
       },
     })
+
+    console.log('Successfully created page:', result.id)
 
     return NextResponse.json(
       { message: 'Successfully subscribed!' },
