@@ -18,25 +18,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if email already exists
-    const existingSubscriber = await notion.databases.query({
-      database_id: databaseId,
-      filter: {
-        property: 'Email',
-        title: {
-          equals: email,
-        },
-      },
-    })
-
-    if (existingSubscriber.results.length > 0) {
-      return NextResponse.json(
-        { error: 'Email already subscribed' },
-        { status: 409 }
-      )
-    }
-
-    // Add new subscriber
+    // Add new subscriber (skip duplicate check for now)
     await notion.pages.create({
       parent: {
         database_id: databaseId,
@@ -75,6 +57,15 @@ export async function POST(request: NextRequest) {
     )
   } catch (error) {
     console.error('Subscription error:', error)
+    
+    // Check if it's a duplicate error from Notion
+    if (error instanceof Error && error.message.includes('already exists')) {
+      return NextResponse.json(
+        { error: 'Email already subscribed' },
+        { status: 409 }
+      )
+    }
+    
     return NextResponse.json(
       { error: 'Failed to subscribe. Please try again.' },
       { status: 500 }
