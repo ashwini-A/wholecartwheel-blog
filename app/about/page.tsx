@@ -79,6 +79,7 @@ export default function AboutPage() {
         <Newsletter 
           title="Stay connected"
           description="Subscribe to get updates when I publish new posts about career, data insights, and project learnings."
+          source="About Page"
         />
       </div>
     </div>

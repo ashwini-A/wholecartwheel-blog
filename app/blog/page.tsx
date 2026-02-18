@@ -32,6 +32,7 @@ export default async function BlogPage() {
             <Newsletter 
               title="Never miss a post"
               description="Subscribe to get my latest thoughts on career transitions, work-life balance, and navigating tech as a human."
+              source="Blog Page"
             />
           </div>
         </>
